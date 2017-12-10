@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Register Items</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+    <script src="main.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+	
+	<form id="registerauction" class="form-horizontal" role="form">
+                                
+        <div class="form-group">
+            <label for="itemid" class="col-md-3 control-label">Item ID</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="name" id="itemid" placeholder="Item ID">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="starttime" class="col-md-3 control-label">Auction Start Time</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="name" id="starttime" placeholder="Time in EPOUCH">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="endtime" class="col-md-3 control-label">Auction End Time</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="name" id="endtime" placeholder="End Time in EPOUCH">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="baseprice" class="col-md-3 control-label">Base Price</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="name" id="baseprice" placeholder="Put a Base price for auction">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="finalprice" class="col-md-3 control-label">Final Price</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="name" id="finalprice" placeholder="Put a Base price for auction">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <!-- Button -->                                        
+            <div class="col-md-offset-3 col-md-9">
+                <button id="regauc" type="button" class="btn btn-info"><i class="icon-hand-right"></i> Register Auction</button>
+            </div>
+        </div>
+                                
+    </form>
+
+</body>
+</html>

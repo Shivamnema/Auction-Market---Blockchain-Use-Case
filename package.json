@@ -1,0 +1,21 @@
+{
+    "name": "sample",
+    "version": "1.0.0",
+    "description": "The block chain sample project",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.17.2",
+        "config.json": "0.0.4",
+        "cors": "^2.8.3",
+        "eris-db": "^0.15.12",
+        "express": "^4.15.3",
+        "path": "^0.12.7",
+        "solc": "^0.4.15",
+        "web3": "^0.19.1"
+    }
+}

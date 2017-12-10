@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Register Items</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+    <script src="main.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+    $(document).ready(function(){
+
+	//ajax request for registring ITem.
+	$('#regitem').click(function(event) {
+	event.preventDefault();
+	$.ajax({
+		type: 'POST',
+		url: "http://127.0.0.1:5000/registerItem",
+		data: {
+			"itemName" : $('#itemname').val(),
+			"itemDesc" : $('#itemdesc').val(),
+			"owner" : $('#itemown').val()
+		},
+		success: function(data){
+            alert(data);
+            console.log(data);
+			window.location.href = "dash.html";
+			}
+		});
+	});
+    });
+</script>
+
+
+</head>
+<body>
+	
+	<form id="registeritem" class="form-horizontal" role="form">
+                                
+        <div class="form-group">
+            <label for="itemname" class="col-md-3 control-label">Item Name</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="name" id="itemname" placeholder="Item Name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="itemdesc" class="col-md-3 control-label">Item Description</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="name" id="itemdesc" placeholder="Item Description">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="itemown" class="col-md-3 control-label">Item Owner Address</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="name" id="itemown" placeholder="Item Owner">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <!-- Button -->                                        
+            <div class="col-md-offset-3 col-md-9">
+                <button id="regitem" type="button" class="btn btn-info"><i class="icon-hand-right"></i> Register Item</button>
+            </div>
+        </div>
+                                
+    </form>
+
+</body>
+</html>
